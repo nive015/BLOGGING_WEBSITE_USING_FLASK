@@ -14,7 +14,7 @@ from sklearn.svm import SVC
 from sklearn.naive_bayes import GaussianNB
 from PIL import Image
 st.set_page_config(
-    page_icon="robo.jfif",
+    page_icon="DSProject/robo.jfif",
     layout="wide",
     initial_sidebar_state="auto",
     )
@@ -54,7 +54,7 @@ st.markdown("""
 try:
     st.markdown('<h1 style="color:red;font-family:Algerian;font-size:+2;">Classification Algorithms</h1><hr>', unsafe_allow_html=True)
     #sidebar image
-    i_path = "robo.jfif"
+    i_path = "DSProject/robo.jfif"
     image = Image.open(i_path)
     st.sidebar.image(image, caption="", use_column_width=True)
 
