@@ -55,7 +55,7 @@ st.markdown("""
        <div style="text-align:left;"> 6. Naive Bayes:</div><br><div style="text-align:right;">Naive Bayes is a probabilistic classifier based on Bayes' Theorem with an assumption of independence between features. It is particularly effective for large datasets and works well with text classification problems.</div><br></h3>
     """, unsafe_allow_html=True)
 # Sidebar image
-i_path = "robo.jfif"
+i_path = "DSProject/robo.jfif"
 image = Image.open(i_path)
 st.sidebar.image(image, caption="", use_column_width=True)
 
