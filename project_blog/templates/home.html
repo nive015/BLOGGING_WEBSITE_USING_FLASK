@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Home{% endblock %}</title>
+    <style>
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        body {
+            background-color: burlywood;
+            font-family: Arial, sans-serif;
+        }
+        .header img {
+            width: 100%;
+            height: auto;
+            max-height: 300px;
+        }
+        .main-content {
+            padding: 20px;
+        }
+        .main-content h1 {
+            text-align: center;
+            color: #333;
+        }
+        .main-content h2 {
+            color: #555;
+        }
+        .section {
+            background-color: white;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div id="div1" style="display: block;background-color: bisque;">
+        <center>
+            <img width="100%" height="300px" src="https://cdn.wallpapersafari.com/10/45/zAgUJl.jpg" alt="logo">
+        </center>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/blogs">Blogs</a>
+            <a href="/login">Login</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </div>
+    
+    <!-- Main Content Section -->
+    <div class="main-content">
+        <h1>Welcome to Our Blogging Website</h1>
+        <p>This is your space to explore, create, and share your thoughts with the world. Whether you're passionate about food, fashion, sports, or any other topic, this is your platform to let your voice be heard!</p>
+
+        <!-- About Us Section -->
+        <div class="section">
+            <h2>About Us</h2>
+            <p>We are a community of bloggers who believe in the power of sharing ideas. Our platform allows users to write and publish their own blogs, read content from other bloggers, and engage with the community by commenting and sharing blogs. Our goal is to provide a simple yet powerful platform that encourages creativity and expression.</p>
+        </div>
+
+        <!-- How to Write a Blog Section -->
+        <div class="section">
+            <h2>How to Write a Blog</h2>
+            <p>Writing a blog on our platform is easy and intuitive. Here’s a quick guide to get you started:</p>
+            <ol>
+                <li><strong>Create an Account:</strong> First, you need to sign up for an account. Once registered, you’ll have access to the blogging tools.</li>
+                <li><strong>Choose a Category:</strong> When you start a new blog post, choose from categories like Food, Sports, Fashion, and more. This helps readers find content that interests them.</li>
+                <li><strong>Write Your Content:</strong> Add a catchy title, and start writing your blog content. Share your thoughts, experiences, and tips in your own voice. Make sure to add images to make your blog more engaging!</li>
+                <li><strong>Review and Publish:</strong> Once you're happy with your post, review it, and hit the 'Publish' button. Your blog will be live for others to read, comment on, and share.</li>
+            </ol>
+            <p>Remember, great content comes from authenticity. Write about what you love, and connect with your audience by sharing personal experiences and insights.</p>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <p>&copy; 2024 Blogging Website. All rights reserved.</p>
+    </div>
+
+    {% block content %}{% endblock %}
+</body>
+</html>

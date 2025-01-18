@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Blog</title>
+    <style>
+        body {
+            background-color: burlywood;
+            font-family: Arial, sans-serif;
+        }
+        .form-container {
+            background-color: white;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 400px;
+            margin:auto;
+        }
+        input[type="text"], input[type="file"], textarea, select {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #4cae4c;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .back-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #d9534f; /* Red color for back button */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .back-button:hover {
+            background-color: #c9302c; /* Darker red on hover */
+        }
+       
+    </style>
+</head>
+<body>
+    <div id="div1" style="display: block;background-color: bisque;"></div>
+    <center>
+        <img width=100%  height="300px" src="https://cdn.wallpapersafari.com/10/45/zAgUJl.jpg" alt="logo">
+    </center>
+    <nav>
+        <a href="javascript:void(0);" onclick="window.history.back();">Go Back</a>
+        <a href="/">Home</a>
+        <a href="/blogs">Blogs</a>
+        <a href="/login">Login</a>
+        <a href="/contact">Contact</a>
+    </nav>
+</div>
+    <div class="form-container">
+        <h2>Add New Blog</h2>
+        <form method="POST" action="/add_blog" enctype="multipart/form-data">
+            <select name="category" required>
+                <option value="">Select Category</option>
+                <option value="food">Food</option>
+                <option value="sports">Sports</option>
+                <option value="fashion">Fashion</option>
+            </select>
+            <input type="text" name="title" placeholder="Blog Title" required>
+            <textarea name="content" placeholder="Write your blog content here..." required></textarea>
+            <input type="file" name="image" accept="image/*" required>
+            <button type="submit">Add Blog</button>
+            <button class="back-button" onclick="window.history.back();">Back</button>
+
+        </form>
+    </div>
+ 
+</body>
+</html>

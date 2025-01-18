@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Contact{% endblock %}</title>
+    <style>
+         body {
+            background-color: burlywood;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+       
+        .contact-container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+        }
+        .contact-container h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .contact-info {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #444;
+            margin-bottom: 20px;
+        }
+        .contact-info a {
+            color: #0073e6;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        .map {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .map iframe {
+            border: none;
+            width: 100%;
+            height: 300px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div id="div1" style="display: block;background-color: bisque;">
+        <center>
+            <img width=100%  height="300px" src="https://cdn.wallpapersafari.com/10/45/zAgUJl.jpg" alt="logo">
+        </center>
+        <nav>
+            <a href="javascript:void(0);" onclick="window.history.back();">Go Back</a>
+            <a href="/">Home</a>
+            <a href="/blogs">Blogs</a>
+            <a href="/login">Login</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </div>
+    
+    <!-- Contact Section -->
+    <div class="contact-container">
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+            <p>If you have any questions, feedback, or just want to get in touch, feel free to reach out to us through the following:</p>
+            <p><strong>Email:</strong> <a href="mailto:support@bloggingwebsite.com">support@bloggingwebsite.com</a></p>
+            <p><strong>Instagram:</strong> <a href="https://www.instagram.com/bloggingwebsite" target="_blank">@bloggingwebsite</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+1234567890">+0000000000</a></p>
+            <p>We’re always here to help! Feel free to reach out with any inquiries or suggestions. You can also find us on social media platforms like Instagram to stay updated with the latest blogs and news.</p>
+        </div>
+
+        <!-- Embedded Google Map -->
+        <div class="map">
+            <h3>Our Location</h3>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093746!2d144.95592831531857!3d-37.81720997975171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xfb12b90e3f1b1468!2sFlinders%20St%2C%20Melbourne%20VIC%203000%2C%20Australia!5e0!3m2!1sen!2sus!4v1613436022535!5m2!1sen!2sus" 
+                allowfullscreen=""
+                loading="lazy"></iframe>
+        </div>
+    </div>
+    
+    
+
+    {% block content %}{% endblock %}
+</body>
+</html>

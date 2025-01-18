@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Blogs</title>
+    <style>
+        body {
+            background-color: burlywood;
+            font-family: Arial, sans-serif;
+        }
+        .blog {
+            background-color: white;
+            border-radius: 5px;
+            margin: 20px auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 800px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .no-blogs {
+            text-align: center;
+            color: #777;
+            margin: 50px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1" style="background-color: bisque;"></div>
+    <center>
+        <img style="width:100%; height:300px;" src="https://cdn.wallpapersafari.com/10/45/zAgUJl.jpg" alt="logo">
+    </center>
+    <nav>
+        <a href="javascript:void(0);" onclick="window.history.back();">Go Back</a>
+        <a href="/">Home</a>
+        <a href="/blogs">Blogs</a>
+        <a href="/login">Login</a>
+        <a href="/contact">Contact</a>
+    </nav>
+
+    <div>
+        {% if blogs %}
+            {% for blog in blogs %}
+                <div class="blog">
+                    <h2>Food Blogs</h2>
+                    <h3>{{ blog.title }}</h3>
+                    <!-- Display resized image -->
+                    <img src="{{ url_for('static', filename='uploads/' + blog.image) }}" alt="Blog Image">
+                    <p>{{ blog.content[:100] }}...</p>
+                    <p><strong>Likes:</strong> {{ blog.like_count }} | <strong>Views:</strong> {{ blog.view_count }}</p>
+                    <a href="{{ url_for('view_blog', blog_id=blog._id) }}">Read More</a>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p class="no-blogs">No food blogs available.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

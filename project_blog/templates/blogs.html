@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Blogs{% endblock %}</title>
+    <style>
+         body {
+            background-color: burlywood;
+            font-family: Arial, sans-serif;
+        }
+       nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    
+</head>
+<body>
+    <div id="div1" style="display: block;background-color: bisque;">
+        <center>
+            <img width=100%  height="300px" src="https://cdn.wallpapersafari.com/10/45/zAgUJl.jpg" alt="logo">
+        </center>
+        <nav>
+            <a href="javascript:void(0);" onclick="window.history.back();">Go Back</a>
+            <a href="/">Home</a>
+            <a href="/blogs">Blogs</a>
+            <a href="/login">Login</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </div>
+    <div id="div2" style="display: block;">
+        <table>
+            <tr>
+                <td>
+                    <img onclick="window.location.href='/foodblog';" style="padding: 20px;" width="450px" height="500px" src="https://img.freepik.com/free-photo/top-view-arrangement-with-tasty-food_23-2148941548.jpg" alt="foodImg">
+                </td>
+                <td>
+                    <img onclick="window.location.href='/sportsblog';" style="padding: 20px;" width="450px" height="500px" src="https://thumbs.dreamstime.com/b/flat-design-team-sports-icons-vector-illustration-vertical-various-symbols-51787273.jpg" alt="sprortsImg">
+                </td>
+                <td>
+                    <img onclick="window.location.href='/fashionblog';" style="padding: 20px;" width="450px" height="500px" src="https://static.vecteezy.com/system/resources/thumbnails/030/465/537/small/clothes-hang-in-a-modern-boutique-reflecting-contemporary-fashion-at-the-clothing-shop-vertical-mobile-wallpaper-ai-generated-free-photo.jpg" alt="fashionImg">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="content"></div>
+        {% block content %}{% endblock %}
+    </div>
+     <!-- Footer Section -->
+     <div class="footer">
+        <p>&copy; 2024 Blogging Website. All rights reserved.</p>
+    </div>
+</body>
+</html>
