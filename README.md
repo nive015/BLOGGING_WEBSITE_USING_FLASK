@@ -1,6 +1,6 @@
 # BLOGGING_WEBSITE_USING_FLASK_MONGODB
 
-# **Application Setup**
+**Application Setup**
 The app connects to **MongoDB** as its database and sets up a system for handling **image uploads**. It ensures:
 - A dedicated folder exists to store uploaded images.
 - Only **certain image formats** are allowed to prevent errors.
@@ -35,8 +35,6 @@ Users can **create, delete, and view their blogs** once logged in.
 - Users can **delete their own blogs**, but not anyone else's.
 - The system verifies the logged-in user before allowing deletion.
 - Once deleted, the blog is **removed from the database** permanently.
-
----
 
 **Blog Categorization**
 The app organizes blogs into **three categories**:  
