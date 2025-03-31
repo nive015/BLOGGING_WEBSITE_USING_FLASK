@@ -1,19 +1,23 @@
 # BLOGGING_WEBSITE_USING_FLASK_MONGODB
 
 **Application Setup**
+
 The app connects to **MongoDB** as its database and sets up a system for handling **image uploads**. It ensures:
 - A dedicated folder exists to store uploaded images.
 - Only **certain image formats** are allowed to prevent errors.
 A **secret key** is used to manage user sessions, ensuring that authentication works properly.
 
 **User Authentication System**
+
 Your application has a **login and registration system** that allows users to create an account and sign in.
  **1. User Registration**
+ 
 - New users can **sign up** using an email, username, and password.
 - The system checks if the email is **already registered** before allowing a new account.
 - Once registered, the user is **automatically logged in**, and their session begins.
 
 **2. User Login**
+
 - Users enter their **username and password** to log in.
 - The system verifies the credentials **against MongoDB**.
 - If correct, the user’s **session starts**, allowing them to access their personal blog dashboard.
