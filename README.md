@@ -41,6 +41,7 @@ Users can **create, delete, and view their blogs** once logged in.
 - Once deleted, the blog is **removed from the database** permanently.
 
 **Blog Categorization**
+
 The app organizes blogs into **three categories**:  
 - **Food**
 - **Sports**
@@ -51,6 +52,7 @@ Each category has its own **dedicated page**, displaying all blogs related to th
 When a user visits a category, the system **fetches all blogs labeled under that category** from MongoDB.
 
 **Viewing Blog Posts**
+
 - Users can click on a blog post to **view its full content**.
 - Each time a blog is viewed, its **view count is increased by one**, allowing users to track **which blogs are the most popular**.
 - The blog details (title, content, image, and view count) are displayed on a separate page.
