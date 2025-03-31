@@ -16,7 +16,7 @@ Your application has a **login and registration system** that allows users to cr
 - The system checks if the email is **already registered** before allowing a new account.
 - Once registered, the user is **automatically logged in**, and their session begins.
 
-**2. User Login**
+**User Login**
 
 - Users enter their **username and password** to log in.
 - The system verifies the credentials **against MongoDB**.
